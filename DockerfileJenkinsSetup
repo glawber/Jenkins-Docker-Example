@@ -18,8 +18,6 @@ apt-get -y install docker-ce
 
 RUN apt-get install -y docker-ce
 
-docker exec --user root Jenkins_Docker groupmod -g `cut -d: -f3 < <(getent group docker)` docker
-docker restart Jenkins_Docker
 RUN usermod -a -G docker jenkins
 
 
